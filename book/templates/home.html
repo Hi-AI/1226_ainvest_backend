@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <button>增加</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>作者</th>
+        <th>出版社</th>
+    </th>
+    </tr>
+    </thead>
+    {% for book in book_lst %}
+        <tbody>
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ book.name }}</td>
+            <td>{{ book.auther }}</td>
+            <td>{{ book.Publishs.name }}</td>
+            <td><a href="">编辑</a></td>
+            <td><a href="">删除</a></td>
+        </tr>
+        </tbody>
+    {% endfor %}
+</table>
+</body>
+</html>
