@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from app01 import views
+
 urlpatterns = [
-    url(r'get_books/',views.Book.as_view())
+    url(r'getbooks/',views.UserViewSet.as_view())
 ]
